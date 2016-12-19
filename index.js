@@ -1,6 +1,6 @@
 'use strict';
 
-require('./polyfills/all.js');
+require('./polyfills');
 const Config = require('./source/config/config');
 const NwDownloader = require('./source/nw.downloader.js');
 
