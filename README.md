@@ -28,12 +28,17 @@ nw.js downloader
 ```
 $ node
 > let nwDownloader = require('./index.js')
-> nwDownloader({ 
+> let downloadPromise = nwDownloader({ 
 	version: 'v0.19.2', 
 	architecture: 'x64', 
 	type: 'sdk', 
 	tmpFolder: './tmp', 
 	platform: 'linux' 
 })
+
+downloadPromise.then(
+	() => console.log('Download was sucessful'), 
+	(error) => console.log('There was an error during download', error)
+)
 
 ```
