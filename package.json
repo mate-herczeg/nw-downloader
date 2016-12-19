@@ -3,9 +3,6 @@
   "version": "0.0.1",
   "description": "Node Webkit downloader package for TMF projects",
   "main": "index.js",
-  "scripts": {
-    "nw-downloader": "node download.js"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mate-herczeg/nw-downloader.git"

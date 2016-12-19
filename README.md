@@ -24,12 +24,6 @@ nw.js downloader
 	+ default value: ./tmp
 	+ valid values: writeable folder path
 
-## Command Line Example
-```
- npm run nw-downloader -- --version=v0.19.2 --architecture=x64 --type=sdk --tmpFolder=./tmp  --platform=linux
-
-```
-
 ## Javascript Example
 ```
 $ node
