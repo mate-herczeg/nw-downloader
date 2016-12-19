@@ -13,8 +13,7 @@
     "fs-extra": "^1.0.0",
     "request": "^2.79.0",
     "targz": "^1.0.1",
-    "unzip": "^0.1.11",
-    "yargs": "^6.5.0"
+    "unzip": "^0.1.11"
   },
   "bugs": {
     "url": "https://github.com/mate-herczeg/nw-downloader/issues"
