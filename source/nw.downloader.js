@@ -20,8 +20,12 @@ module.exports = class NwDownloader {
         return new Promise((resolve) => {
             this._isNwExist()
                 .catch(() => this._startDownload())
-                .finally(resolve);
+                .finally(() => resolve(this.getNwFolder()));
         });
+    }
+
+    getNwFolder() {
+        return path.join(this._config.folders.tmp, this._config.nw.filename);
     }
 
     _isNwExist() {
