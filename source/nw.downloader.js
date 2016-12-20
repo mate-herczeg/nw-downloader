@@ -2,7 +2,7 @@
 
 const Promise = require('bluebird');
 const fs = Promise.promisifyAll(require('fs-extra'));
-const compressionFactory = require('./utils/compression/compression.factory');
+const Compression = require('./utils/compression.js');
 const path = require('path');
 const file = require('./utils/file');
 
@@ -39,11 +39,7 @@ module.exports = class NwDownloader {
     }
 
     _extract() {
-        let compression = compressionFactory.create(
-            this._destination,
-            this._config.folders.tmp
-        );
-        return compression.extract();
+        return (new Compression(this._destination, this._config.folders.tmp)).extract();
     }
 
     _clear() {

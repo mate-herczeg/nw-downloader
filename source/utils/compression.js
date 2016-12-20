@@ -2,6 +2,7 @@
 
 const Promise = require('bluebird');
 const fs = Promise.promisifyAll(require('fs-extra'));
+const decompress = require('decompress');
 
 module.exports = class Compression {
     constructor(compressedFile, destination) {
@@ -12,5 +13,9 @@ module.exports = class Compression {
     extract() {
         return fs.ensureDirAsync(this._destination)
             .then(() => this._extract());
+    }
+
+    _extract() {
+        return decompress(this._file, this._destination);
     }
 };
